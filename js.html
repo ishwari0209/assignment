@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Add two numbers and print the result. (Use + operator)
+        var a = prompt("enter a to perform opretaions-");
+        var b = prompt("enter b to perform opretaions");
+        console.log("a is-", a);
+        console.log("b is-", b);
+        console.log("addition of a&b-", a + b);
+        //2. Find the remainder when 17 is divided by 3. (Use % operator)
+        console.log("reminder of 17%3 is-", 17 % 3);
+        //3. Multiply three numbers: 2, 3, and 4. (Use * operator)
+        console.log("2*3*4", 2 * 3 * 4);
+        //4. Subtract 100 from 250 and divide the result by 5. (Use - and / operators)
+        console.log("subtract 100 from 250 & divide by 5 is-", (250 - 100) / 5);
+        // 5. What will be the output?
+        let f = 5;
+        let g = ++f;
+        console.log(f, g);
+        //6. Use += operator to add 10 to a variable initialized as 20.
+        console.log("using +=", a += 10);
+        //7. Use *= to double the value of a variable initialized as 7.
+        var num = 7;
+        console.log("using *=", num *= 2);
+        // 8. What will be the output?
+        let va_1 = 10;
+        va_1 -= 3;
+        console.log(va_1);
+        // 9. Check if two numbers are equal using == or ===.
+        console.log("check using ==", a == b);
+        console.log("check using ===", a === b);
+        //10. Check if 25 is greater than 15 using > operator.
+        console.log("check using >", 25 > 15);
+        // 11. Compare two numbers and print true if the first is smaller.
+        console.log("compare 2 numbers and print true if 1st is smaller", a > b);
+        //12. What is the output ?
+        console.log("check 5==='5'", 5 === '5');
+        // 13. Check if a number is between 10 and 50 using && operator.
+        console.log("num is betn 10 and 50 using && opreator", a > 10 && a < 50);
+        //14. Check if a number is less than 10 or greater than 100 using || operator.
+        console.log("num is less than 10 or greater than 100 using || opreator", a < 10 || a > 100);
+        // 16. Negate a boolean value using! operator.Print the opposite of true.
+        console.log("negative boolean value-", !(a > b));
+        // 20. Predict the output:
+        let x = 5;
+        let y = x++ + ++x;
+        console.log(y);
+        //21. Even or Odd Checker
+        //Write a program to take a number from the user and check whether it is even or odd.
+        if (a % 2 == 0) {
+            console.log("even");
+        }
+        else {
+            console.log("odd");
+        }
+        //22 Positive, Negative or Zero
+
+        // Ask the user to input a number and check if it's positive, negative, or zero.
+        if (a > 0) {
+            console.log("it's positive");
+        }
+        else if (a == 0) {
+            console.log("zero");
+        }
+        else {
+            console.log("negative");
+        }
+        //23 Vowel or Consonant
+
+        // Take a single alphabet as input and check whether it's a vowel or a consonant.
+        var alpha = prompt("enter any alphatbet to check whether it's a vowel or a consonant");
+        if (alpha == 'a' || alpha == 'e' || alpha == 'i' || alpha == 'o' || alpha == 'u') {
+            console.log("It's vowel");
+        }
+        else {
+            console.log("It's consonant");
+        }
+        // 24 Grade Calculator
+        // Take marks (0–100) as input and print the grade based on:
+        // > =90 → A
+        // > =75 and <90 → B
+        // > =50 and <75 → C
+        // <50 → Fail
+
+        var marks = prompt("enter marks to Grade Calculator-");
+        console.log("marks are-", marks);
+        if (marks >= 90 && marks <= 100) {
+            console.log("your grade is A");
+
+        }
+        else if (marks >= 75 && marks <= 90) {
+            console.log("your grade is B");
+        }
+        else if (marks >= 50 && marks <= 75) {
+            console.log("your grade is C");
+        }
+        else if (marks < 50) {
+            console.log("you are fail");
+        }
+        else {
+            console.log("you entered marks more than 100");
+        }
+        // 25 Leap Year Checker
+
+        // Ask the user to enter a year and check if it's a leap year or not.
+        // (Leap year rule: divisible by 4 and not 100, or divisible by 400)
+        var year = prompt("enter year to check if it's a leap year or not-");
+        console.log("you entered year is-", year);
+        if ((year % 4 == 0 || year % 400 == 0) && year % 100 != 0) {
+            console.log("It's leap year");
+        }
+        else {
+            console.log("It's not leap year");
+        }
+        // 26 Age Eligibility for Voting
+
+        // Take age as input and check if the user is eligible to vote (age ≥ 18).
+        var age = prompt("enter age to check if the user is eligible to vote-");
+        console.log("you entered age is-", age);
+        if (age >= 18) {
+            console.log("eligible to vote");
+        }
+        else {
+            console.log("Not eligible to vote");
+        }
+        //27 Triangle Type Checker
+        // Take three angles as input. Check if they form a valid triangle (sum = 180).
+        // Then check the type of triangle:
+        // All angles equal → Equilateral
+        // Any two equal → Isosceles
+        // All different → Scalene
+        var angle_1 = prompt("enter 1st angle of triangle-");
+        console.log("you entered 1st angle is-", angle_1);
+        var angle_2 = prompt("enter 2nd angle of triangle-");
+        console.log("you entered 2nd angle is-", angle_2);
+        var angle_3 = prompt("enter 3rd angle of triangle-");
+        console.log("you entered 3rd angle is-", angle_3);
+        var sum;
+        sum = angle_1 + angle_2 + angle_3;
+        if (sum == 180) {
+            console.log("triangle is valid");
+            if (angle_1 == angle_2 && angle_2 == angle_3) {
+                console.log("triangle is Equilateral");
+            }
+            else if (angle_1 == angle_2 || angle_1 == angle_3 || angle_2 == angle_3) {
+                console.log("triangle is Isosceles");
+            }
+            else {
+                console.log("triangle is Scalene");
+            }
+        }
+        else {
+            console.log("triangle is not valid");
+        }
+        //28 Smallest of Three Numbers
+
+        // Take three numbers from the user and print the smallest one using only if and if-else
+        var c = prompt("enter c to check smlallest number");
+        var d = prompt("enter d to check smlallest number");
+        var e = prompt("enter e to check smlallest number");
+        console.log("c is-", c);
+        console.log("d is-", d);
+        console.log("e is-", e);
+        if (c < d && c < e) {
+            console.log("smaller number-", c);
+        }
+        else if (d < c && d < e) {
+            console.log("smaller number-", d);
+        }
+        else {
+            console.log("smaller number-", e);
+        }
+        //29 Greater of Two Numbers
+        //Take two numbers as input and print the greater number.
+        var num_1 = prompt("enter 1st number to print greatest among 2 numbbers-");
+        var num_2 = prompt("enter 2nd number to print greatest among 2 numbbers-");
+        console.log("num 1-", num_1);
+        console.log("num 2-", num_2);
+        if (num_1 > num_2) {
+            console.log("Greatest number is-", num_1);
+        }
+        else {
+            console.log("Greatest number is-", num_2);
+        }
+        //30. Absolute Value
+        //Take an integer input and print its absolute value.
+        //(If negative, convert it to positive)
+        var abs = prompt("enter value to check is it absolute or not?");
+        console.log("you entered value to check absoloute or not it is-", abs);
+        if (abs > 0) {
+            console.log("It is aldredy absolute value",abs);
+        }
+        else {
+            abs = -(abs);
+            console.log("absolute value is-", abs);
+        }
+      // Ternary Operator (?:)
+//31. Take a number from the user and check whether it is even or odd using the ternary operator.
+        var tan=prompt("enter number to use in ternary opreator");
+        console.log("you entered number to use in ternary opreator is-",tan);
+        var result=(tan%2==0? "even": "odd");
+        console.log("even or odd?",result);
+//32. Check whether a user is eligible to vote (age >= 18) using the ternary operator
+        var tan_age=prompt("enter age to check in ternary opreator-");
+        console.log("age is-",tan_age);
+        var result_1=(tan_age>=18? "eligible to vote" : "not eligible to vote");
+        console.log("eligible or not-",result_1)
+//33. Take two numbers and print the greater one using the ternary operator
+    var tan_num1=prompt("enter 1st number to print greater number using ternary opreator-");
+    var tan_num2=prompt("enter 2nd number to print greater number using ternary opreator-");
+    console.log("you entered 1st number is-",tan_num1);    
+    console.log("you entered 2nd number is-",tan_num2);  
+    var result_2=(tan_num1>tan_num2? tan_num1 : tan_num2);
+    console.log("greater number is-",result_2);
+//34. Check if a number is divisible by 5 using the ternary operator
+    var tan_divisible_5=prompt("enter number to check number is divisible by 5 or not?");
+    console.log("you entered number is to check divisible by 5 or not is-",tan_divisible_5);
+    var result_3=(tan_divisible_5%5==0 ? "yes it is": "no, it's not");
+    console.log("It is divisible by 5 or not-",result_3);
+//35. Take a character input and check whether it's a vowel or consonant using ternary logic
+    var tan_alpha=prompt("enter alphabet to check vowels or constant by using ternary opretaor-");
+    console.log("entered alphabet is-",tan_alpha);
+    var result_4=tan_alpha=="a"|| tan_alpha=="e"|| tan_alpha=="i" || tan_alpha== "o" || tan_alpha=="u" ? "vowel" : "constant";
+    console.log("is it vowel or constant-",result_4);
+      //Nested if else
+//36. Take a number and check if it's positive, negative, or zero using nested if else
+        var tan_num3=prompt("enter number to check positive negative or zero using ternary opreator");
+        console.log("you entered number is-",tan_num3);
+        if ( tan_num3 >= 0) 
+        {
+                if ( tan_num3==0)
+                {
+                console.log("zero");
+                }
+                else{
+                    console.log("it's positive");
+                }
+        }
+        else {
+            console.log("negative");
+        }
+//37 Take three numbers and print the largest among them using nested if else.
+        var c = prompt("enter c to check largest number using nested if-else");
+        var d = prompt("enter d to check largest  number using nested if-else");
+        var e = prompt("enter e to check largest  number using nested if-else");
+        console.log("c is-", c);
+        console.log("d is-", d);
+        console.log("e is-", e);
+       if(c!=" " && d!=" " && e!=" ")
+       {
+         if (c > d && c > e) {
+            console.log("larger number-", c);
+        }
+        else if(d > c && d > e) {
+            console.log("larger number-", d);
+        }
+        else {
+            console.log("larger number-", e);
+        }
+    }
+        else {
+            console.log("you entered null value");
+      }
+ //. Take a number and check if it's even. If yes, check if it's divisible by 4.
+  var tan_num3=prompt("enter number to check even or not");
+        console.log("you entered number is-",tan_num3);
+        if(tan_num3%2==0)
+      {
+        if(tan_num3%4==0)
+      {
+        console.log("it is even and divisible by 4");
+      }
+      else{
+        console.log("it is even number but not divisible by 4");
+      }
+      }
+      else{
+        console.log("it is odd number")
+      }
+//Input a day number (17), print the corresponding day name using else if
+var day=prompt("enter day number 1-7 to print it's day name-");
+console.log("you entered day number is-");
+if(day==1)
+{
+    console.log("it's Monday");
+}
+else if(day==2)
+{
+    console.log("it's Tuesday");
+}
+else if(day==3)
+{
+    console.log("it's wednesday");
+}
+else if(day==4)
+{
+    console.log("it's Thursday");
+}
+else if(day==5)
+{
+    console.log("it's friday");
+}
+else if(day==6)
+{
+    console.log("it's saturday");
+}
+else if(day==7)
+{
+    console.log("it's Sunday");
+}
+else{
+    console.log("please enter number between 1-7");
+}
+//Input marks (0100), assign grade: A, B, C, D, or F using else if
+    var marks = prompt("enter marks to Grade Calculator-");
+        console.log("marks are-", marks);
+        if (marks >= 90 && marks <= 100) {
+            console.log("your grade is A");
+
+        }
+        else if (marks >= 75 && marks <= 90) {
+            console.log("your grade is B");
+        }
+        else if (marks >= 50 && marks <= 75) {
+            console.log("your grade is C");
+        }
+        else if (marks < 50) {
+            console.log("Your grade is f");
+        }
+        else {
+            console.log("you entered marks more than 100");
+        }
+//Input month number (112), print the number of days in that month
+    var month=prompt("enter month number 1-12 to print it's month name-");
+console.log("you entered month number is-");
+if(month==1 || month==3 || month==5 || month==7 || month==8 || month==10 ||month==12)
+{
+    console.log("31 days in ",month);
+}
+else if(month==4 || month==6 || month==9 || month==11)
+{
+    console.log("30 days in ",month);
+}
+else if(month==2)
+{
+    console.log("28/29 days in ",month);
+}
+else{
+    console.log("please enter month between 1 to 12");
+}
+//Input temperature and display message: Very Hot (>=40), Hot (>=30), Warm (>=20), Cold (>=10), Very
+//Cold (<10).
+     var temp=prompt("enter tempreature-");
+    console.log("you entered tempreature is-");
+     if (temp>=40) {
+            console.log("very hot");
+
+        }
+        else if (temp>=30) {
+            console.log("hot");
+        }
+        else if (temp>=20) {
+            console.log("warm");
+        }
+        else if (temp>=10) {
+            console.log("cold");}
+       
+        else {
+            console.log("very cold");
+        }
+//Input a number and check: If divisible by 2 and 3, only 2, only 3, or neither.
+var num_6=prompt("enter number to check it is divisible or not-");
+    console.log("you entered number is-");
+    if(num_6%2==0 && num_6%3==0)
+    {
+        console.log("it is divisible by both 2 and 3");
+    }
+    else if(num_6%2==0)
+    {
+        console.log("number divisible by only 2");
+    }
+    else if(num_6%3==0)
+    {
+         console.log("number divisible by only 3");
+    }
+    else{
+         console.log("number is not divisible by 2 or 3");
+    }
+  //Check If a Number is Even or Odd
+ //Use the modulus (%) operator and logical operators, without using if or ternary (? :).
+ var num=2;
+ console.log(num,"is even -", num%2==0 );
+//Return true Only if Both Inputs Are Non-Zero Numbers
+ //Use logical AND (&&) operator
+ var a = prompt("enter a to check zero or non-zero-");
+        var b = prompt("enter b to check zero or non-zero-");
+        console.log("a is-", a);
+        console.log("b is-", b);
+        var remainder=a!=0 && b!=0? "true": "false";
+        console.log("they are non-zeo numbers");
+        let j = 0;
+ let i = 10;
+ let result1 = j && i;
+ let result2 = j || i;
+ console.log(result1);
+ console.log(result2);
+ // What are result1 and result2?
+
+    </script>
+</body>
+
+</html>
